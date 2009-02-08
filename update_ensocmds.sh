@@ -2,7 +2,7 @@
 
 cat ~/.ensocommands > ~/.ensocommands
 
-for cmd in $(find /Users/takai/Python/my-enso-commands -name '*.py'); do
+for cmd in $(find . -name '*.py'); do
     echo "execfile(\"$cmd\")" >> ~/.ensocommands
 done
 

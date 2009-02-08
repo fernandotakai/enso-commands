@@ -94,3 +94,5 @@ def cmd_send_colloquy(ensoapi, text=""):
           "end tell\n"
         "end tell" % text
     )
+
+cmd_send_colloquy.description = "Sends a message to the active irc channel on Colloquy"

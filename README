@@ -1,5 +1,4 @@
-These are Atul's Enso commands.  To install these commands, just add
-the following line to your .ensocommands file (creating it if it
-doesn't exist) in your home directory:
+These are the commands that i forked from Atul (http://hg.toolness.com/my-enso-commands/).
 
-  execfile("/absolute/path/to/my-enso-commands.py")
+To install, run the update_ensocmds.sh commands.
+WARNING: running this script will erase any other installed command.
