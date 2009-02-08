@@ -1,4 +1,5 @@
 import AddressBook
+import os 
 
 class SendEmail(object):
 
@@ -7,6 +8,13 @@ class SendEmail(object):
         self.valid_args = []
         self.people = {}
         self.description = "Send the selected text by email to contact"
+        self.read_passwd()
+        
+    def read_passwd(self):
+        f = file(os.path.expanduser("~/.email"))
+        self.username = f.next().strip()
+        self.password = f.next().strip()
+        f.close()
         
     def on_quasimode_start(self):
         if self._isFetchingArgs:
@@ -56,8 +64,8 @@ class SendEmail(object):
 
         server = "smtp.gmail.com"
         port = 587
-        username = "user@gmail.com"
-        password = "passwd"
+        username = self.username
+        password = self.password
         
         to = self.people[to]
         print to
