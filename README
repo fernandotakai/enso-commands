@@ -1,0 +1,5 @@
+These are Atul's Enso commands.  To install these commands, just add
+the following line to your .ensocommands file (creating it if it
+doesn't exist) in your home directory:
+
+  execfile("/absolute/path/to/my-enso-commands.py")
